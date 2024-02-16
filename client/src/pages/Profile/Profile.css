@@ -1,0 +1,52 @@
+#profile {
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-color: #000;
+}
+
+#profile .container {
+  width: 90%;
+  height: 100%;
+  max-width: 1110px;
+
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+  .side {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-side {
+    width: 40%;
+  }
+
+  .add-side {
+    width: 60%;
+  }
+
+  .add-side .add-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+.buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

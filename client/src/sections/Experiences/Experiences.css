@@ -1,0 +1,23 @@
+#experiences {
+  width: 100%;
+  height: 1032px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-color: #000;
+}
+
+#experiences .container {
+  width: 90%;
+  height: 100%;
+  max-width: 1110px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: relative;
+}

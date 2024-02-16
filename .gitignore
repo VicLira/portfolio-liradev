@@ -1,0 +1,115 @@
+# Ignorar arquivos gerados pelo ViteJS
+node_modules/
+dist/
+
+# Ignorar arquivos de configuração do sistema
+.env
+.DS_Store
+
+# Ignorar arquivos de log
+logs/
+
+# Ignorar arquivos de cache
+.cache/
+
+# Ignorar arquivos de cobertura de código
+coverage/
+
+# Ignorar arquivos de IDE
+.idea/
+
+# Ignorar arquivos de configuração do VS Code
+.vscode/
+
+# Ignorar arquivos de configuração do Docker
+.dockerignore
+
+# Ignorar arquivos de configuração do Github Actions
+.github/workflows/
+
+# Ignorar arquivos de configuração do ESLint
+.eslintrc.json
+
+# Ignorar arquivos de configuração do Prettier
+.prettierrc
+
+# Ignorar arquivos de configuração do Husky
+.huskyrc
+
+# Ignorar arquivos de configuração do Lint-staged
+.lintstagedrc
+
+# Ignorar arquivos de configuração do Jest
+jest.config.js
+
+# Ignorar arquivos de configuração do Babel
+.babelrc
+
+# Ignorar arquivos de configuração do Webpack
+webpack.config.js
+
+# Ignorar arquivos de configuração do PostCSS
+postcss.config.js
+
+# Ignorar arquivos de configuração do TypeScript
+tsconfig.json
+
+# Ignorar arquivos de configuração do Jest
+jest.config.js
+
+# Ignorar arquivos de configuração do Cypress
+cypress.json
+
+# Ignorar arquivos de configuração do Storybook
+.storybook/
+
+# Ignorar arquivos de configuração do Apollo
+.apollo/
+
+# Ignorar arquivos de configuração do GraphQL
+.graphqlconfig
+
+# Ignorar arquivos de configuração do ESLint
+.eslintrc
+
+# Ignorar arquivos de configuração do Prettier
+.prettierrc
+
+# Ignorar arquivos de configuração do Husky
+.huskyrc
+
+# Ignorar arquivos de configuração do Lint-staged
+.lintstagedrc
+
+# Ignorar arquivos de configuração do Jest
+jest.config.js
+
+# Ignorar arquivos de configuração do Babel
+.babelrc
+
+# Ignorar arquivos de configuração do Webpack
+webpack.config.js
+
+# Ignorar arquivos de configuração do PostCSS
+postcss.config.js
+
+# Ignorar arquivos de configuração do TypeScript
+tsconfig.json
+
+# Ignorar arquivos de configuração do Jest
+jest.config.js
+
+# Ignorar arquivos de configuração do Cypress
+cypress.json
+
+# Ignorar arquivos de configuração do Storybook
+.storybook/
+
+# Ignorar arquivos de configuração do Apollo
+.apollo/
+
+# Ignorar arquivos de configuração do GraphQL
+.graphqlconfig
+
+# Ignorar arquivos rest.http
+rest.http

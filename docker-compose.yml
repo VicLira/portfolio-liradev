@@ -1,0 +1,38 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:4.2
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-data:/data/db
+
+  client:
+    build: ./client
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    stdin_open: true
+    tty: true
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/
+      MONGO_INITDB_DATABASE: portfolio_db
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: HKtssVy6GU-=*
+    volumes:
+      - ./server:/app
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongodb-data: {}

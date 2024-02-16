@@ -1,0 +1,29 @@
+/* FOOTER ================= */
+
+.footer {
+    width: 95%;
+    max-width: 1170px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 20px;
+    color: #f5f5f5;
+  }
+  
+    .footer-list { 
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        color: #000;
+        background-color: #f5f5f5;
+        padding: 10px 50px;
+        border-radius: 20px 5px 20px 5px;
+    }
+
+
+/* END FOOTER ================= */

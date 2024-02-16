@@ -1,0 +1,163 @@
+html, * {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+
+  font-family: 'Oswald', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+
+/* TITLES ================= */
+
+.primary-title {
+  font-size: 50px;
+  font-family: 'Righteous', sans-serif;
+  text-transform: uppercase;
+}
+
+.white {
+  color: #F5F5F5;
+}
+
+.secondary-title {
+  color: #F5F5F5;
+  text-transform: uppercase;
+
+  font-family: 'Righteous', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.terteary-title {
+  color: #F5F5F5;
+
+  font-family: 'Righteous', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.primary-text {
+  color: #F5F5F5;
+  opacity: 0.8;
+
+  text-indent: 18px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.secondary-text {
+  color: #F5F5F5;
+  opacity: 0.6;
+
+  text-indent: 17px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* END TITLES ================= */
+
+/* BUTTONS ================= */
+
+.card-footer .button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+  .card-footer .button-wrapper .card-button {
+    width: 100%;
+  }
+
+.primary-btn, .add-btn {
+  width: 100%;
+  background-color: #4BA5A5;
+  border: none;
+  color: #F5F5F5;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding: 15px 0;
+  transition: 0.2s;
+}
+
+  .add-btn-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 312px;
+    border-radius: 20px 5px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .btn-icon {
+    font-size: 32px;
+    position: absolute;
+    right: 5%;
+    color: #F5F5F5;
+  }
+
+  .primary-btn {
+    border-radius: 15px;
+  }
+
+  .primary-btn:hover, .add-btn:hover, .add-btn-wrapper:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .turn-btn {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    color: #F5F5F5;
+    font-size: 64px;
+    transition: 0.5s;
+  }
+
+    .turn-btn:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+
+/* END BUTTONS ================= */
+
+
+/* SCROLLBAR ================= */
+
+*::-webkit-scrollbar {
+  width: 10px; /* largura da barra de rolagem */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888; /* cor do polegar da barra de rolagem */
+  border-radius: 5px; /* borda do polegar da barra de rolagem */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* cor do track da barra de rolagem */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* END SCROLLBAR ================= */

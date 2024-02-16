@@ -1,0 +1,35 @@
+/* HEADER ================= */
+
+.header {
+    width: 95%;
+    max-width: 1170px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 20px;
+    color: #f5f5f5;
+  }
+  
+    .header-list {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+    }
+
+    .header-list li {
+      cursor: pointer;
+    }
+
+    .header-logo {
+      color: #4BA5A5;
+      background-color: #f5f5f5;
+      padding: 10px 50px;
+      border-radius: 20px 5px 20px 5px;
+    }
+
+    
+
+
+/* END HEADER ================= */

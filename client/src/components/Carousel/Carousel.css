@@ -1,0 +1,108 @@
+/* CAROUSEL ================= */
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1110px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-item.left {
+    flex-direction: row-reverse;
+}
+
+
+.carousel-text-wrapper {
+    width: 50%;
+    max-width: 300px;
+    height: 100%;
+    font-size: 14px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carousel-role {
+    color: #f5f5f5;
+    margin-left: 25px;
+}
+
+.carousel-text-wrapper .primary-text {
+    height: 150px;
+    overflow-y: auto;
+    text-align: justify;
+    padding-right: 5px;
+}
+
+.carousel-img-wrapper {
+    width: 360px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+    .carousel-img {
+        display: none;
+        width: 80%;
+        object-fit: cover;
+        position: absolute;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .carousel-img.prev {
+        display: flex;
+        width: 75%;
+        top: 10%;
+        opacity: 0.8;
+        transition: top 1s ease, opacity 1s ease;
+    }
+
+    .carousel-img.selected {
+        display: flex;
+        transition: top 1s ease, opacity 1s ease;
+    }
+
+    .carousel-img.next {
+        display: flex;
+        width: 75%;
+        top: 100%;
+        opacity: 0.8;
+        transition: top 1s ease, opacity 1s ease;
+    }
+
+    .carousel-control-wrapper {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .carousel-control {
+        padding: 20px;
+        
+    }
+  
+  /* END CAROUSEL ================= */
