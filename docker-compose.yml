@@ -25,10 +25,10 @@ services:
     depends_on:
       - mongo
     environment:
-      MONGO_URI: mongodb://mongo:27017/
-      MONGO_INITDB_DATABASE: portfolio_db
+      MONGO_URI: "${MONGO_URI}"
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: HKtssVy6GU-=*
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_INITDB_ROOT_PASSWORD}"
     volumes:
       - ./server:/app
     stdin_open: true
