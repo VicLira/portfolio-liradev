@@ -25,6 +25,7 @@ services:
     depends_on:
       - mongo
     environment:
+      MONGODB_URI: "${MONGODB_URI}"
       MONGO_URI: "${MONGO_URI}"
       MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
       MONGO_INITDB_ROOT_USERNAME: root
