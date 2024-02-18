@@ -1,0 +1,12 @@
+# netlify.toml
+
+# Defina as configurações gerais do seu site
+[build]
+  command = "npm run build"
+  publish = "build"  # Esta é a pasta onde os arquivos compilados do seu projeto React serão armazenados após a construção
+
+# Defina redirecionamentos e reescritas de URL, se necessário
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
