@@ -15,7 +15,7 @@ function CardGroup() {
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const response = await axios.get(`http://${process.env.API_PATH}/cards`);
+                const response = await axios.get(`${process.env.API_PATH}/cards`);
                 setCardData(response.data);
             } catch (error) {
                 console.error('Erro ao buscar dados dos cards:', error);

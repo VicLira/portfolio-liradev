@@ -13,7 +13,7 @@ function Experiences() {
   useEffect(() => {
     const fetchExperienceStudyData = async () => {
       try {
-        const response = await axios.get(`http://${process.env.API_PATH}/experiences/type/?type=study`)
+        const response = await axios.get(`${process.env.API_PATH}/experiences/type/?type=study`)
         console.log(response.data)
         setExperienceStudyData(response.data)
           } catch(error) {
@@ -27,7 +27,7 @@ function Experiences() {
   useEffect(() => {
       const fetchExperienceJobData = async () => {
           try {
-              const response = await axios.get(`http://${process.env.API_PATH}/experiences/type/?ctype=job`)
+              const response = await axios.get(`${process.env.API_PATH}/experiences/type/?ctype=job`)
               console.log(response.data)
               setExperienceJobData(response.data)
           } catch(error) {
