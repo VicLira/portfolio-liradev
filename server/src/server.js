@@ -10,7 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin: [ 'http://localhost:3000', 
             'https://liradev-portfolio.netlify.app' 
-          ] // Permitir apenas solicitações do localhost:3000
+          ],
+  methods: ["GET", "POST", "DELETE"],
+  credentials: true,
+  origin: true,
 }));
 
 // Initialize DB
