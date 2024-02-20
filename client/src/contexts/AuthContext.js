@@ -19,7 +19,7 @@ export function AuthProvider({ children, redirectTo }) {
 
     // async function fetchUserDetails(token) {
     //     try {
-    //         const response = await fetch('http://localhost:5000/users/fetchUserDetails', {
+    //         const response = await fetch(`http://${process.env.API_PATH}/users/fetchUserDetails`, {
     //             headers: {
     //                 'Authorization': `Bearer ${token}`
     //             }
@@ -42,7 +42,7 @@ export function AuthProvider({ children, redirectTo }) {
         
 
         try {
-            const response = await fetch('http://localhost:5000/users/signIn', {
+            const response = await fetch(`http://${process.env.API_PATH}/users/signIn`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

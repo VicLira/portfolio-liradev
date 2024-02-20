@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       }
   
       // Carregue os dados do card usando o ID
-      return fetch(`http://localhost:5000/cards/${params.id}`).then((response) => response.json());
+      return fetch(`http://${process}/cards/${params.id}`).then((response) => response.json());
     },
   },
   {

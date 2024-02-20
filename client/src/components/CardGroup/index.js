@@ -15,7 +15,7 @@ function CardGroup() {
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/cards');
+                const response = await axios.get(`http://${process.env.API_PATH}/cards`);
                 setCardData(response.data);
             } catch (error) {
                 console.error('Erro ao buscar dados dos cards:', error);
@@ -63,12 +63,9 @@ function CardGroup() {
 
             {/* INICIO CARD-GROUP*/}
             <div className='card-group'>
-
-                {/* INICIO CARD*/}
                 {currentCards.map(card => (
                     <div key={card._id} className='card'>
 
-                        {/* INICIO CARD-TOP*/}
                         <div className='card-top'>
                             <LoadImg classes={'blog-img'} imgURL={card.thumbnail_src} imgTitle={"Imagem do blog"} />
                         </div>

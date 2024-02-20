@@ -63,7 +63,7 @@ function NewArticle() {
 
       console.log('Form Data:', formData);
 
-      const response = await axios.post('http://localhost:5000/cards', {
+      const response = await axios.post(`http://${process.env.API_PATH}/cards`, {
         title,
         description,
         thumbnail_src: thumbnailSrc,

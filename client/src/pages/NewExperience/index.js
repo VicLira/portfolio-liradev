@@ -63,7 +63,7 @@ function NewExperience() {
       
       console.log('Form Data:', formData);
       
-      const response = await axios.post('http://localhost:5000/experiences', {
+      const response = await axios.post(`http://${process.env.API_PATH}/experiences`, {
         image_url,
         title,
         description,

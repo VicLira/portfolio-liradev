@@ -35,7 +35,7 @@ function CardDetails() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/cards/${id}`);
+                const response = await axios.get(`http://${process.env.API_PATH}/cards/${id}`);
                 setData(response.data);
             } catch (error) {
                 console.error('Erro ao buscar dados dos cards:', error);
