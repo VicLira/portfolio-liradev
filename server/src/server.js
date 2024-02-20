@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin: [ 'http://localhost:3000', 
-            'https://65d4dbe36ed5c205168cc3c9--liradev-portfolio.netlify.app' 
+            'https://liradev-portfolio.netlify.app' 
           ] // Permitir apenas solicitações do localhost:3000
 }));
 
