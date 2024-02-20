@@ -11,11 +11,12 @@ import LoadImg from '../LoadImg';
 
 function CardGroup() {
     const [cardData, setCardData] = useState([]);
+    const API_PATH = process.env.REACT_APP_API_PATH;
 
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const response = await axios.get(`${process.env.API_PATH}/cards`);
+                const response = await axios.get(`${API_PATH}/cards`);
                 setCardData(response.data);
             } catch (error) {
                 console.error('Erro ao buscar dados dos cards:', error);
@@ -63,7 +64,7 @@ function CardGroup() {
 
             {/* INICIO CARD-GROUP*/}
             <div className='card-group'>
-                {currentCards.map(card => (
+                {currentCards == null ? 'CurrentCards Sem dados' : currentCards.map(card => (
                     <div key={card._id} className='card'>
 
                         <div className='card-top'>

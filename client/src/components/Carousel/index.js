@@ -45,7 +45,7 @@ function Carousel({ imgPosition, showText, carouselData }) {
                             <h2 className='secondary-title'>Meu Papel</h2>
                             {carouselData[selectedItemIndex] && carouselData[selectedItemIndex].roles && (
                                 <ul>
-                                    {carouselData[selectedItemIndex].roles.map((role, roleIndex) => (
+                                    {carouselData[selectedItemIndex] == null ? 'Sem dados carousel para carregar' : carouselData[selectedItemIndex].roles.map((role, roleIndex) => (
                                         <li key={roleIndex} className='carousel-role'>{role}</li>
                                     ))}
                                 </ul>
@@ -56,7 +56,7 @@ function Carousel({ imgPosition, showText, carouselData }) {
                 {/* FIM TEXTO CAROSSEL */}
                 {/* INICIO IMAGEM CAROSSEL */}
                 <div className={`carousel-img-wrapper`}>
-                    {carouselData.map((item, index) => {
+                    {carouselData == null ? 'Sem dados para carregar' : carouselData.map((item, index) => {
                         if (index === selectedItemIndex - 1 || index === selectedItemIndex || index === selectedItemIndex + 1) {
                             return loadImg(selectedItemIndex, index, item.title, item.image_url);
                         }

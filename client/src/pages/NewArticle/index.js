@@ -14,6 +14,7 @@ import { FaCircleChevronLeft } from "react-icons/fa6";
 
 
 function NewArticle() {
+  const API_PATH = process.env.REACT_APP_API_PATH;
   const [formData, setFormData] = useState({
     input_title: '',
     input_description: '',
@@ -63,11 +64,11 @@ function NewArticle() {
 
       console.log('Form Data:', formData);
 
-      const response = await axios.post(${process.env.API_PATH}/cards`, {
+      const response = await axios.post(`${API_PATH}/cards`, {
         title,
         description,
         thumbnail_src: thumbnailSrc,
-        tags: tags.split(",").map(tag => tag.trim()),
+        tags: tags == null ? 'Sem tags para carregar' : tags.split(",").map(tag => tag.trim()),
         author,
         date
       })

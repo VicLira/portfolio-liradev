@@ -9,11 +9,12 @@ import Carousel from '../../components/Carousel';
 function Experiences() {
   const [experienceStudyData, setExperienceStudyData] = useState([]);
   const [experienceJobData, setExperienceJobData] = useState([]);
+  const API_PATH = process.env.REACT_APP_API_PATH;
 
   useEffect(() => {
     const fetchExperienceStudyData = async () => {
       try {
-        const response = await axios.get(`${process.env.API_PATH}/experiences/type/?type=study`)
+        const response = await axios.get(`${API_PATH}/experiences/type/?type=study`)
         console.log(response.data)
         setExperienceStudyData(response.data)
           } catch(error) {
@@ -27,7 +28,7 @@ function Experiences() {
   useEffect(() => {
       const fetchExperienceJobData = async () => {
           try {
-              const response = await axios.get(`${process.env.API_PATH}/experiences/type/?ctype=job`)
+              const response = await axios.get(`${API_PATH}/experiences/type/?ctype=job`)
               console.log(response.data)
               setExperienceJobData(response.data)
           } catch(error) {

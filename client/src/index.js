@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   useNavigate,
 } from 'react-router-dom';
+
 import { AuthProvider, AuthContext } from './contexts/AuthContext';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -67,6 +68,7 @@ const router = createBrowserRouter([
     path: '/details/:id',
     element: <CardDetails />,
     loader: ({ params }) => {
+      const API_PATH = process.env.REACT_APP_API_PATH;
       // Valide o ID aqui (por exemplo, verifique se é um número válido)
       const isValidId = /^\d+$/.test(params.id);
       if (!isValidId) {
@@ -75,7 +77,7 @@ const router = createBrowserRouter([
       }
   
       // Carregue os dados do card usando o ID
-      return fetch(`${process.env.API_PATH}/cards/${params.id}`).then((response) => response.json());
+      return fetch(`${API_PATH}/cards/${params.id}`).then((response) => response.json());
     },
   },
   {

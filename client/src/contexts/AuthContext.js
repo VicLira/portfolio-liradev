@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 export function AuthProvider({ children, redirectTo }) {
     const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const API_PATH = process.env.REACT_APP_API_PATH;
 
 
     // Ainda não foi criado, mas tem itenção manter usuario logado mesmo que ele feche a pagina
@@ -19,7 +20,7 @@ export function AuthProvider({ children, redirectTo }) {
 
     // async function fetchUserDetails(token) {
     //     try {
-    //         const response = await fetch(`${process.env.API_PATH}/users/fetchUserDetails`, {
+    //         const response = await fetch(`${API_PATH}/users/fetchUserDetails`, {
     //             headers: {
     //                 'Authorization': `Bearer ${token}`
     //             }
@@ -42,7 +43,7 @@ export function AuthProvider({ children, redirectTo }) {
         
 
         try {
-            const response = await fetch(`${process.env.API_PATH}/users/signIn`, {
+            const response = await fetch(`${API_PATH}/users/signIn`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -12,6 +12,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 
 function NewExperience() {
+  const API_PATH = process.env.REACT_APP_API_PATH;
   const [formData, setFormData] = useState({
     input_title: '',
     input_description: '',
@@ -63,13 +64,13 @@ function NewExperience() {
       
       console.log('Form Data:', formData);
       
-      const response = await axios.post(`${process.env.API_PATH}/experiences`, {
+      const response = await axios.post(`${API_PATH}/experiences`, {
         image_url,
         title,
         description,
         start_date: startDate,
         end_date: endDate,
-        roles: roles.split(",").map(tag => tag.trim()),
+        roles: roles == null ? 'Sem roles para carregar' : roles.split(",").map(tag => tag.trim()),
         type,
       });
   

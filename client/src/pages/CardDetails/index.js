@@ -15,6 +15,7 @@ import { FaCircleChevronLeft } from "react-icons/fa6";
 function CardDetails() {
     const { id } = useParams();
     const [data, setData] = useState(null);
+    const API_PATH = process.env.REACT_APP_API_PATH;
     // const [likes, setLikes] = useState(0);
     // const [curtido, setCurtido] = useState(false);
 
@@ -35,7 +36,7 @@ function CardDetails() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${process.env.API_PATH}/cards/${id}`);
+                const response = await axios.get(`${API_PATH}/cards/${id}`);
                 setData(response.data);
             } catch (error) {
                 console.error('Erro ao buscar dados dos cards:', error);
