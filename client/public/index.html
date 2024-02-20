@@ -2,7 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="liradev-logo-black.ico" id="favicon">
+
+    <script>
+      const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      function toggleFavicon() {
+        const favicon = document.getElementById('favicon');
+        if (prefersDarkMode) {
+          favicon.href = 'liradev-logo-black.ico';
+        } else {
+          favicon.href = 'liradev-logo-white.ico';
+        }
+      }
+
+      toggleFavicon();
+
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
