@@ -28,7 +28,7 @@ function Experiences() {
   useEffect(() => {
       const fetchExperienceJobData = async () => {
           try {
-              const response = await axios.get(`${API_PATH}/experiences/type/?ctype=job`)
+              const response = await axios.get(`${API_PATH}/experiences/type/?type=job`)
               console.log(response.data)
               setExperienceJobData(response.data)
           } catch(error) {
