@@ -73,11 +73,30 @@ function NewExperience() {
         roles: roles == null ? 'Sem roles para carregar' : roles.split(",").map(tag => tag.trim()),
         type,
       });
-  
-      console.log(response);
-      alert("Post criado com sucesso!");
-    } catch (error) {
-      console.error('Erro ao enviar dados dos cards:', error);
+
+      // Resetando os campos do formulário
+      setFormData({
+        image_url: null,
+        title: '',
+        description: '',
+        start_date: null,
+        end_date: null,
+        roles: '',
+        type: ''
+      });
+
+
+      MySwal.fire({
+        title: 'Sucesso!',
+        text: "Experiencia postada com sucesso!",
+        icon: "success"
+      })
+    } catch(error) {
+      MySwal.fire({
+        title: 'Falha ao postar!',
+        text: error,
+        icon: "error"
+      })
     }
   };
 
@@ -104,13 +123,13 @@ function NewExperience() {
           <div className='form-wrapper'>
             <h1 className='primary-title white'>New Experience</h1>
             <form className='add-form' onSubmit={handleSubmit}>
-              <Field inputType={'text'} inputName={'title'} placeholder={'Name'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'description'} placeholder={'Description'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'roles'} placeholder={'Roles(front, back)'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'type'} placeholder={'Type (job, study)'} onChange={handleInputChange} />
+              <Field inputType={'text'} inputName={'title'} placeholder={'Name'} onChange={handleInputChange} isTextarea={false}/>
+              <Field inputType={'text'} inputName={'description'} placeholder={'Description'} onChange={handleInputChange} isTextarea={true}/>
+              <Field inputType={'text'} inputName={'roles'} placeholder={'Roles(front, back)'} onChange={handleInputChange} isTextarea={false}/>
+              <Field inputType={'text'} inputName={'type'} placeholder={'Type (job, study)'} onChange={handleInputChange} isTextarea={false}/>
               <div className='col'>
-                <Field inputType={'date'} inputName={'startDate'} placeholder={'Start Date'} onChange={handleInputChange} />
-                <Field inputType={'date'} inputName={'endDate'} placeholder={'End Date'} onChange={handleInputChange} />
+                <Field inputType={'date'} inputName={'startDate'} placeholder={'Start Date'} onChange={handleInputChange} isTextarea={false}/>
+                <Field inputType={'date'} inputName={'endDate'} placeholder={'End Date'} onChange={handleInputChange} isTextarea={false}/>
               </div>
               
             <button type='submit' className='primary-btn'>Submit</button>

@@ -2,10 +2,12 @@ import React from "react";
 
 import './Field.css';
 
-function Field({ inputType, inputName, placeholder, value, onChange }) {
+function Field({ inputType, inputName, placeholder, value, onChange, isTextarea }) {
+    const InputComponent = isTextarea ? 'textarea' : 'input';
+
     return (
         <div className="field-wrapper">
-            <input
+            <InputComponent
                 type={inputType}
                 className="field-input"
                 id={`input_${inputName}`}
@@ -15,7 +17,8 @@ function Field({ inputType, inputName, placeholder, value, onChange }) {
                 onChange={onChange} 
             />
         </div>
-    )
+    );
 }
 
 export default Field;
+

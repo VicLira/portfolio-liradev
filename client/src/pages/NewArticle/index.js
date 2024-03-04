@@ -72,8 +72,17 @@ function NewArticle() {
         author,
         date
       })
+
+      // Resetando os campos do formulário
+      setFormData({
+        input_title: '',
+        input_description: '',
+        input_thumbnailSrc: null,
+        input_tags: '',
+        input_author: '',
+        input_date: new Date()
+      });
       
-      console.log(response);
       MySwal.fire({
         title: 'Sucesso!',
         text: "Artigo postado com sucesso!",
@@ -112,10 +121,10 @@ function NewArticle() {
           <div className='form-wrapper'>
             <h1 className='primary-title white'>New Article</h1>
             <form className='add-form' onSubmit={handleSubmit}>
-              <Field inputType={'text'} inputName={'title'} placeholder={'Title'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'description'} placeholder={'Description'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'tags'} placeholder={'Tags (IA, MACHINE-LEARNING)'} onChange={handleInputChange} />
-              <Field inputType={'text'} inputName={'author'} placeholder={'Author'} onChange={handleInputChange} />
+              <Field inputType={'text'} inputName={'title'} placeholder={'Title'} onChange={handleInputChange} isTextarea={false}/>
+              <Field inputType={'text'} inputName={'description'} placeholder={'Description'} onChange={handleInputChange} isTextarea={true}/>
+              <Field inputType={'text'} inputName={'tags'} placeholder={'Tags (IA, MACHINE-LEARNING)'} onChange={handleInputChange} isTextarea={false}/>
+              <Field inputType={'text'} inputName={'author'} placeholder={'Author'} onChange={handleInputChange} isTextarea={false}/>
             <button type='submit' className='primary-btn'>Submit</button>
             </form> 
 

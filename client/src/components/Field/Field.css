@@ -1,4 +1,4 @@
-.field-wrapper input {
+.field-wrapper input, .field-wrapper textarea {
     width: 100%;
     background: none;
     padding: 10px 0;
@@ -9,7 +9,7 @@
     transition: 0.5s ease;
 }
 
-.field-wrapper input:focus {
+.field-wrapper input:focus, .field-wrapper textarea:focus {
     outline: none;
     border-bottom: 1px solid #4BA5A5;
   }
